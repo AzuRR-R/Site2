@@ -1,6 +1,7 @@
 [build]
-  publish = "."  # Publikacija iz trenutnog direktorijuma
-  command = ""  # Ako nemaš build alat, ovo može biti prazno
+  base = "Site"  # Ovo će promeniti root direktorijum
+  publish = "."
+  command = ""
 
 [dev]
   command = "live-server"  # Ako koristiš live-server za lokalni razvoj
