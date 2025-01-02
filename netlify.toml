@@ -1,8 +1,7 @@
 [build]
-  base = "Site"  # Ovo će promeniti root direktorijum
-  publish = "."
-  command = ""
-
+  base = "Documents/Site"  # Ažuriraj ovu putanju
+  publish = "public"
+  command = "npm run build"
 [dev]
-  command = "live-server"  # Ako koristiš live-server za lokalni razvoj
+  command = "live-server"
   port = 8080

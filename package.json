@@ -4,7 +4,8 @@
   "description": "Landing page for FTMO",
   "main": "index.html",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "build": "echo 'No build step defined'"
   },
   "dependencies": {},
   "devDependencies": {
