@@ -1,6 +1,7 @@
 [build]
-  publish = "/"
-  command = ""
+  publish = "."  # Publikacija iz trenutnog direktorijuma
+  command = ""  # Ako nemaš build alat, ovo može biti prazno
+
 [dev]
-  command = "live-server"
+  command = "live-server"  # Ako koristiš live-server za lokalni razvoj
   port = 8080
