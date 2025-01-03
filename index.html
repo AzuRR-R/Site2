@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Povezivanje CSS datoteke -->
+    <link rel="stylesheet" href="style.css">
     <title>FTMO Landing Page</title>
     <script src="script.js"></script>
     <script src="auth.js"></script>
+    <script>
+    // Add smooth scrolling for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
 </head>
 <body>
     
@@ -24,7 +40,7 @@
                     </ul>
                 </li>
                 <li><a href="#faq">Česta Pitanja</a></li>
-                <li><a href="#racuni">Računi</a></li>
+                <li><a href="#trgovacki-ciljevi">Računi</a></li>
                 <li><a href="login.html" class="client-area-link">Korisnička Zona</a></li>
                 <li>
                     <a href="#jezik" class="language-selector">
@@ -36,13 +52,13 @@
     </header>
     
     <section class="background-section">
-        <div class="background-image"></div> <!-- Pozadinska slika -->
+        <div class="background-image"></div>
         <h1 style="font-size: 72px; font-weight: bold;">Wonderthat Money</h1>
         <p>Zaradi više od drugih jer oni ne znaju za ovaj sajt. Uzmi račun od 10.000KM za 100KM i kladi se punim potencijalom!</p>
         
         <div class="box-container">
             <a href="#" class="box challenge-btn">WTM Izazov</a>
-            <a href="#racuni" class="box transparent-box">Pogledaj ciljeve</a>
+            <a href="#trgovacki-ciljevi" class="box transparent-box">Pogledaj ciljeve</a>
         </div>
     </section>
 
@@ -68,12 +84,12 @@
                 </div>
             </div>
             <div class="next-step-container">
-                <a href="#racuni" class="box">Pogledaj Ponude</a>
+                <a href="#trgovacki-ciljevi" class="box">Pogledaj Ponude</a>
             </div>
         </div>
     </section>
 
-    <section id="racuni" class="trading-objectives">
+    <section id="trgovacki-ciljevi" class="trading-objectives">
         <div class="trading-box">
             <h2>Trgovački Ciljevi</h2>
             <p>Uslovi i ciljevi</p>
