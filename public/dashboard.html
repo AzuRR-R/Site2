@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>WTM Dashboard</title>
+</head>
+<body>
+    <div class="back-button">
+        <a href="index.html" class="back-link">
+            ← Povratak na početnu
+        </a>
+    </div>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="brm.png" alt="FTMO Logo" class="logo" />
+            </div>
+<nav class="dashboard-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+                <ul>
+                    <li class="active"><a href="#overview"><i class="fas fa-home"></i>Pregled</a></li>
+                    <li><a href="#trading"><i class="fas fa-chart-line"></i>Trgovanje</a></li>
+                    <li><a href="#history"><i class="fas fa-history"></i>Povijest</a></li>
+                    <li><a href="#analytics"><i class="fas fa-chart-bar"></i>Analitika</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i>Postavke</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <input type="search" placeholder="Pretraži...">
+                </div>
+                <div class="user-menu">
+                    <span class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </span>
+                    <div class="user-profile">
+                        <img src="avatar.png" alt="User Avatar">
+                        <span>Korisnik</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Overview Cards -->
+                <section class="overview-cards">
+                    <div class="card">
+                        <h3>Trenutni Balans</h3>
+                        <p class="amount">10,000 BAM</p>
+                        <span class="trend positive">+5.2% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                    <div class="card">
+                        <h3>Dnevni P/L</h3>
+                        <p class="amount">+250 BAM</p>
+                        <span class="trend positive">+2.5% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                    <div class="card">
+                        <h3>Otvorene Pozicije</h3>
+                        <p class="amount">3</p>
+                        <span class="status">Aktivno</span>
+                    </div>
+                    <div class="card">
+                        <h3>Preostali Dani</h3>
+                        <p class="amount">18</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Trading Chart -->
+                <section class="trading-chart">
+                    <div class="chart-header">
+                        <h2>Performanse Trgovanja</h2>
+                        <div class="chart-controls">
+                            <button class="active">Dan</button>
+                            <button>Sedmica</button>
+                            <button>Mjesec</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="tradingChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="recent-activity">
+                    <h2>Nedavne Aktivnosti</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Uspješna Trgovina</h4>
+                                <p>EUR/USD +150 BAM</p>
+                                <span class="time">Prije 2h</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon warning">
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Blizu Dnevnog Limita</h4>
+                                <p>Preostalo 50 BAM</p>
+                                <span class="time">Prije 4h</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon info">
+                                <i class="fas fa-info"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Nova Pozicija</h4>
+                                <p>GBP/JPY Otvoreno</p>
+                                <span class="time">Prije 6h</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

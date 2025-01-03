@@ -1,7 +1,0 @@
-[build]
-  base = "Documents/Site"  # Ažuriraj ovu putanju
-  publish = "public"
-  command = "npm run build"
-[dev]
-  command = "live-server"
-  port = 8080
